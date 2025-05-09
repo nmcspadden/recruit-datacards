@@ -1,0 +1,1760 @@
+{
+  "category": {
+    "uuid": "bf8190da-b331-4264-8c17-854299a6753b",
+    "name": "Working-1000",
+    "type": "list",
+    "cards": [
+      {
+        "abilities": {
+          "core": [],
+          "damaged": {
+            "description": "",
+            "range": "",
+            "showDamagedAbility": false,
+            "showDescription": true
+          },
+          "faction": [
+            "Oath of Moment"
+          ],
+          "invul": {
+            "info": "",
+            "showAtTop": true,
+            "showInfo": false,
+            "showInvulnerableSave": false,
+            "value": ""
+          },
+          "other": [
+            {
+              "name": "Targeted Intercession",
+              "description": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "primarch": [],
+          "special": [],
+          "wargear": []
+        },
+        "cardType": "DataCard",
+        "composition": [
+          "1 Assault Intercessor Sergeant",
+          "4-9 Assault Intercessors"
+        ],
+        "factions": [
+          "Adeptus Astartes"
+        ],
+        "faction_id": "SM",
+        "fluff": "Assault Intercessors are amongst the most widespread close support units in a Chapter’s arsenal. Firing their heavy bolt pistols as they close upon the foe, they charge into the fray, where they make short work of their enemies with brutal swings of their chainswords.",
+        "id": "f17f9afa-b67f-54db-94eb-4e3b3cb3eee9",
+        "keywords": [
+          "Infantry",
+          "Battleline",
+          "Grenades",
+          "Imperium",
+          "Tacticus",
+          "Assault Intercessor Squad"
+        ],
+        "leader": "",
+        "loadout": "Every model is equipped with: heavy bolt pistol; Astartes chainsword.",
+        "meleeWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-1",
+                "attacks": "4",
+                "damage": "1",
+                "keywords": [],
+                "name": "Astartes chainsword",
+                "range": "Melee",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "3",
+                "damage": "2",
+                "keywords": [],
+                "name": "Power fist",
+                "range": "Melee",
+                "skill": "3+",
+                "strength": "8"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "4",
+                "damage": "1",
+                "keywords": [],
+                "name": "Power weapon",
+                "range": "Melee",
+                "skill": "3+",
+                "strength": "5"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "3",
+                "damage": "2",
+                "keywords": [
+                  "Devastating Wounds"
+                ],
+                "name": "Thunder hammer",
+                "range": "Melee",
+                "skill": "4+",
+                "strength": "8"
+              }
+            ]
+          }
+        ],
+        "name": "Assault Intercessor Squad",
+        "points": [
+          {
+            "cost": "150",
+            "keyword": null,
+            "models": "10",
+            "active": true
+          },
+          {
+            "cost": "75",
+            "keyword": null,
+            "models": "5",
+            "active": true
+          }
+        ],
+        "rangedWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-1",
+                "attacks": "1",
+                "damage": "1",
+                "keywords": [
+                  "Pistol"
+                ],
+                "name": "Heavy bolt pistol",
+                "range": "18\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "D6",
+                "damage": "1",
+                "keywords": [
+                  "Torrent",
+                  "Pistol",
+                  "Ignores Cover"
+                ],
+                "name": "Hand flamer",
+                "range": "12\"",
+                "skill": "N/A",
+                "strength": "3"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "1",
+                "damage": "1",
+                "keywords": [
+                  "Pistol"
+                ],
+                "name": "Plasma pistol – Standard",
+                "range": "12\"",
+                "skill": "3+",
+                "strength": "7"
+              },
+              {
+                "active": true,
+                "ap": "-3",
+                "attacks": "1",
+                "damage": "2",
+                "keywords": [
+                  "Pistol",
+                  "Hazardous"
+                ],
+                "name": "Plasma pistol – Supercharge",
+                "range": "12\"",
+                "skill": "3+",
+                "strength": "8"
+              }
+            ]
+          }
+        ],
+        "source": "40k-10e",
+        "stats": [
+          {
+            "active": true,
+            "ld": "6+",
+            "m": "6\"",
+            "name": "Assault Intercessor",
+            "oc": "2",
+            "showDamagedMarker": false,
+            "showName": true,
+            "sv": "3+",
+            "t": "4",
+            "w": "2"
+          }
+        ],
+        "transport": "",
+        "wargear": [
+          "The Assault Intercessor Sergeant’s Astartes chainsword can be replaced with one of the following: ◦ 1 power fist ◦ 1 power weapon ◦ 1 thunder hammer",
+          "The Assault Intercessor Sergeant’s heavy bolt pistol can be replaced with one of the following: ◦ 1 hand flamer ◦ 1 plasma pistol"
+        ],
+        "leadBy": [
+          "Adrax Agatone",
+          "Techmarine",
+          "Ezekiel",
+          "Captain Sicarius",
+          "Librarian",
+          "Vulkan He’stan",
+          "Kor’sarro Khan",
+          "Sanguinary Priest",
+          "Judiciar",
+          "Marneus Calgar",
+          "High Marshal Helbrecht",
+          "Uriel Ventris",
+          "Azrael",
+          "Ragnar Blackmane",
+          "Castellan",
+          "Chief Librarian Tigurius",
+          "Blood Angels Captain",
+          "Asmodai",
+          "Apothecary",
+          "Lieutenant",
+          "Ancient",
+          "Marshal",
+          "Lazarus",
+          "The Emperor’s Champion",
+          "Captain",
+          "Chaplain Grimaldus",
+          "Chaplain"
+        ],
+        "isCustom": true,
+        "uuid": "676da2f8-8553-415b-8191-716165fb00d7",
+        "unitSize": {
+          "cost": "75",
+          "keyword": null,
+          "models": "5",
+          "active": true
+        }
+      },
+      {
+        "abilities": {
+          "core": [
+            "Deadly Demise D3"
+          ],
+          "damaged": {
+            "range": "1-4 WOUNDS REMAINING",
+            "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "showDamagedAbility": true,
+            "showDescription": true
+          },
+          "faction": [
+            "Oath of Moment"
+          ],
+          "invul": {
+            "info": "",
+            "showAtTop": true,
+            "showInfo": false,
+            "showInvulnerableSave": false,
+            "value": ""
+          },
+          "other": [
+            {
+              "name": "Brutalis Charge",
+              "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6:on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "primarch": [],
+          "special": [],
+          "wargear": []
+        },
+        "cardType": "DataCard",
+        "composition": [
+          "1 Brutalis Dreadnought"
+        ],
+        "factions": [
+          "Adeptus Astartes"
+        ],
+        "faction_id": "SM",
+        "fluff": "The Brutalis Dreadnought is a line breaker and a terror weapon. As it storms towards the enemy lines it lays down a hail of anti-personnel fire. Yet the greatest threat lies in its massive ceramite-sheathed fists or talons, which can crush an armoured warrior like spoiled fruit or punch through a bunker wall like parchment.",
+        "id": "4633d8b4-dfaa-5c8e-b0e9-740ebc923c28",
+        "keywords": [
+          "Vehicle",
+          "Walker",
+          "Imperium",
+          "Dreadnought",
+          "Brutalis Dreadnought"
+        ],
+        "leader": "",
+        "loadout": "This model is equipped with: twin Icarus ironhail heavy stubber; twin heavy bolter; Brutalis bolt rifles; Brutalis fists.",
+        "meleeWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "10",
+                "damage": "1",
+                "keywords": [
+                  "Twin-linked"
+                ],
+                "name": "Brutalis talons – Sweep",
+                "range": "Melee",
+                "skill": "3+",
+                "strength": "7"
+              },
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "6",
+                "damage": "3",
+                "keywords": [
+                  "Twin-linked"
+                ],
+                "name": "Brutalis talons – Strike",
+                "range": "Melee",
+                "skill": "3+",
+                "strength": "12"
+              }
+            ]
+          }
+        ],
+        "name": "Brutalis Dreadnought",
+        "points": [
+          {
+            "cost": "160",
+            "keyword": null,
+            "models": "1",
+            "active": true
+          }
+        ],
+        "rangedWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "3",
+                "damage": "1",
+                "keywords": [
+                  "Twin-linked",
+                  "Rapid Fire 3",
+                  "Anti-fly 4+"
+                ],
+                "name": "Twin Icarus ironhail heavy stubber",
+                "range": "36\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-1",
+                "attacks": "4",
+                "damage": "1",
+                "keywords": [
+                  "Twin-linked"
+                ],
+                "name": "Brutalis bolt rifles",
+                "range": "24\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-4",
+                "attacks": "2",
+                "damage": "D6",
+                "keywords": [
+                  "Twin-linked",
+                  "Melta 2"
+                ],
+                "name": "Twin multi-melta",
+                "range": "18\"",
+                "skill": "3+",
+                "strength": "9"
+              }
+            ]
+          }
+        ],
+        "source": "40k-10e",
+        "stats": [
+          {
+            "active": true,
+            "ld": "6+",
+            "m": "8\"",
+            "name": "Brutalis Dreadnought",
+            "oc": "4",
+            "showDamagedMarker": true,
+            "showName": false,
+            "sv": "2+",
+            "t": "10",
+            "w": "12"
+          }
+        ],
+        "transport": "",
+        "wargear": [
+          "This model’s Brutalis fists and Brutalis bolt rifles can be replaced with 1 Brutalis talons.",
+          "This model’s twin heavy bolter can be replaced with 1 twin multi-melta."
+        ],
+        "print_side": "front",
+        "isCustom": true,
+        "uuid": "b936666f-f95a-4d03-b34f-516586998e1c",
+        "unitSize": {
+          "cost": "160",
+          "keyword": null,
+          "models": "1",
+          "active": true
+        }
+      },
+      {
+        "abilities": {
+          "core": [],
+          "damaged": {
+            "description": "",
+            "range": "",
+            "showDamagedAbility": false,
+            "showDescription": true
+          },
+          "faction": [
+            "Oath of Moment"
+          ],
+          "invul": {
+            "info": "",
+            "showAtTop": true,
+            "showInfo": false,
+            "showInvulnerableSave": false,
+            "value": ""
+          },
+          "other": [
+            {
+              "name": "Astartes Banner",
+              "description": "While this unit contains an Ancient, add 1 to the Objective Control characteristic of models in this unit.",
+              "showAbility": true,
+              "showDescription": true
+            },
+            {
+              "name": "Command Squad",
+              "description": "While a CHARACTER model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "primarch": [],
+          "special": [
+            {
+              "description": "You must attach one CAPTAIN or CHAPTER MASTER model to this unit. If this is not possible, this unit does not take part in the battle and counts as having been destroyed.",
+              "name": "Company Heroes",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "wargear": []
+        },
+        "cardType": "DataCard",
+        "composition": [
+          "1 Ancient",
+          "1 Company Champion",
+          "2 Company Veterans"
+        ],
+        "factions": [
+          "Adeptus Astartes"
+        ],
+        "faction_id": "SM",
+        "fluff": "A company’s most heroic battle-brothers fight alongside a Chapter’s high-ranking officers. These veterans and specialists serve as honour guards and provide vital support to a commander. Company Champions defend their Company’s honour with martial excellence, Ancients guard its inspirational banners and Company Veterans lay down hails of fire from relic bolt weapons.",
+        "id": "128e8838-b062-57d4-8bcb-8aa9b012526d",
+        "keywords": [
+          "Infantry",
+          "Grenades",
+          "Imperium",
+          "Tacticus",
+          "Company Heroes"
+        ],
+        "leader": "",
+        "loadout": "The Ancient is equipped with: bolt pistol; bolt rifle; close combat weapon.",
+        "meleeWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "5",
+                "damage": "1",
+                "keywords": [],
+                "name": "Close combat weapon",
+                "range": "Melee",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "6",
+                "damage": "2",
+                "keywords": [
+                  "Precision"
+                ],
+                "name": "Master-crafted power weapon",
+                "range": "Melee",
+                "skill": "2+",
+                "strength": "5"
+              }
+            ]
+          }
+        ],
+        "name": "Company Heroes",
+        "points": [
+          {
+            "cost": "105",
+            "keyword": null,
+            "models": "4",
+            "active": true
+          }
+        ],
+        "rangedWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "1",
+                "damage": "1",
+                "keywords": [
+                  "Pistol"
+                ],
+                "name": "Bolt pistol",
+                "range": "12\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-1",
+                "attacks": "2",
+                "damage": "1",
+                "keywords": [
+                  "Heavy",
+                  "Assault"
+                ],
+                "name": "Bolt rifle",
+                "range": "24\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-1",
+                "attacks": "3",
+                "damage": "3",
+                "keywords": [
+                  "Sustained Hits 2",
+                  "Heavy"
+                ],
+                "name": "Master-crafted heavy bolter",
+                "range": "36\"",
+                "skill": "3+",
+                "strength": "5"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-1",
+                "attacks": "2",
+                "damage": "2",
+                "keywords": [
+                  "Rapid Fire 1",
+                  "Devastating Wounds"
+                ],
+                "name": "Master-crafted bolt rifle",
+                "range": "24\"",
+                "skill": "2+",
+                "strength": "4"
+              }
+            ]
+          }
+        ],
+        "source": "40k-10e",
+        "stats": [
+          {
+            "active": true,
+            "ld": "6+",
+            "m": "6\"",
+            "name": "Company Veteran",
+            "oc": "1",
+            "showDamagedMarker": false,
+            "showName": true,
+            "sv": "3+",
+            "t": "4",
+            "w": "4"
+          }
+        ],
+        "transport": "",
+        "wargear": [
+          "None"
+        ],
+        "leadBy": [
+          "Adrax Agatone",
+          "Captain Sicarius",
+          "Vulkan He’stan",
+          "Kor’sarro Khan",
+          "Marneus Calgar",
+          "Uriel Ventris",
+          "Blood Angels Captain",
+          "Lieutenant",
+          "Pedro Kantor",
+          "Captain"
+        ],
+        "isCustom": true,
+        "uuid": "d8acd32b-db5a-4c78-a70c-c4c29d2d3bd5",
+        "unitSize": {
+          "cost": "105",
+          "keyword": null,
+          "models": "4",
+          "active": true
+        }
+      },
+      {
+        "abilities": {
+          "core": [
+            "Deadly Demise D3",
+            "Firing Deck 6"
+          ],
+          "damaged": {
+            "description": "",
+            "range": "",
+            "showDamagedAbility": false,
+            "showDescription": true
+          },
+          "faction": [
+            "Oath of Moment"
+          ],
+          "invul": {
+            "info": "",
+            "showAtTop": true,
+            "showInfo": false,
+            "showInvulnerableSave": false,
+            "value": ""
+          },
+          "other": [
+            {
+              "name": "Assault Vehicle",
+              "description": "Units can disembark from this TRANSPORT after it has Advanced. Units that do so count as having made a Normal move, and cannot declare a charge that turn.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "primarch": [],
+          "special": [],
+          "wargear": [
+            {
+              "name": "Shield Dome",
+              "description": "The bearer has a 5+ invulnerable save.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ]
+        },
+        "cardType": "DataCard",
+        "composition": [
+          "1 Impulsor"
+        ],
+        "factions": [
+          "Adeptus Astartes"
+        ],
+        "faction_id": "SM",
+        "fluff": "Equipped with vectored thrusters that make it faster than any other gravitic tank in the Space Marines’ armouries, the Impulsor is a highly adaptable transport used by all Primaris Space Marines for rapid insertion and flanking manoeuvres. It is particularly favoured by Vanguard forces.",
+        "id": "5fe8f17a-a8fb-5a0a-9b91-d61114df7d56",
+        "keywords": [
+          "Vehicle",
+          "Transport",
+          "Dedicated Transport",
+          "Imperium",
+          "Impulsor"
+        ],
+        "leader": "",
+        "loadout": "This model is equipped with: 2 storm bolters; armoured hull.",
+        "meleeWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "3",
+                "damage": "1",
+                "keywords": [],
+                "name": "Armoured hull",
+                "range": "Melee",
+                "skill": "4+",
+                "strength": "6"
+              }
+            ]
+          }
+        ],
+        "name": "Impulsor",
+        "points": [
+          {
+            "cost": "80",
+            "keyword": null,
+            "models": "1",
+            "active": true
+          }
+        ],
+        "rangedWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "3",
+                "damage": "1",
+                "keywords": [
+                  "Rapid Fire 3"
+                ],
+                "name": "Ironhail heavy stubber",
+                "range": "36\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "D6",
+                "damage": "1",
+                "keywords": [
+                  "Blast"
+                ],
+                "name": "Fragstorm grenade launcher",
+                "range": "18\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          }
+        ],
+        "source": "40k-10e",
+        "stats": [
+          {
+            "active": true,
+            "ld": "6+",
+            "m": "12\"",
+            "name": "Impulsor",
+            "oc": "2",
+            "showDamagedMarker": false,
+            "showName": false,
+            "sv": "3+",
+            "t": "9",
+            "w": "11"
+          }
+        ],
+        "transport": "This model has a transport capacity of 7 TACTICUS or PHOBOS INFANTRY models. It cannot transport JUMP PACK models.",
+        "wargear": [
+          "This model can be equipped with one of the following: ◦ 1 bellicatus missile array ◦ 1 ironhail skytalon array ◦ 1 orbital comms array ◦ 1 shield dome",
+          "This model’s 2 storm bolters can be replaced with 2 fragstorm grenade launchers.",
+          "This model can be equipped with 1 ironhail heavy stubber."
+        ],
+        "variant": "double",
+        "isCustom": true,
+        "uuid": "00ae2fed-9169-4e07-a49e-407280121571",
+        "unitSize": {
+          "cost": "80",
+          "keyword": null,
+          "models": "1",
+          "active": true
+        }
+      },
+      {
+        "abilities": {
+          "core": [
+            "Deep Strike"
+          ],
+          "damaged": {
+            "description": "",
+            "range": "",
+            "showDamagedAbility": false,
+            "showDescription": true
+          },
+          "faction": [
+            "Oath of Moment"
+          ],
+          "invul": {
+            "info": "",
+            "showAtTop": true,
+            "showInfo": false,
+            "showInvulnerableSave": false,
+            "value": ""
+          },
+          "other": [
+            {
+              "name": "Meteoric Descent",
+              "description": "In your Movement phase, when this unit is set up on the battlefield using the Deep Strike ability, it can perform a meteoric descent. If it does, this unit can be set up anywhere on the battlefield that is more than 6\"horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "primarch": [],
+          "special": [],
+          "wargear": []
+        },
+        "cardType": "DataCard",
+        "composition": [
+          "1 Inceptor Sergeant",
+          "2-5 Inceptors"
+        ],
+        "factions": [
+          "Adeptus Astartes"
+        ],
+        "faction_id": "SM",
+        "fluff": "Equipped with heavy jump packs, Inceptor Squads are superb spearhead troops that deliver overwhelming blows to the enemy. Plummeting to the surface from the very edge of a world’s atmosphere, they strike with devastating force, unleashing a hurricane of fire that turns whole squads of enemy infantry to bloody mist.",
+        "id": "e9978935-9b9f-5858-92c9-381d9378953b",
+        "keywords": [
+          "Infantry",
+          "Jump Pack",
+          "Fly",
+          "Imperium",
+          "Gravis",
+          "Inceptor Squad"
+        ],
+        "leader": "",
+        "loadout": "Every model is equipped with: assault bolters; close combat weapon.",
+        "meleeWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "3",
+                "damage": "1",
+                "keywords": [],
+                "name": "Close combat weapon",
+                "range": "Melee",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          }
+        ],
+        "name": "Inceptor Squad",
+        "points": [
+          {
+            "cost": "240",
+            "keyword": null,
+            "models": "6",
+            "active": true
+          },
+          {
+            "cost": "120",
+            "keyword": null,
+            "models": "3",
+            "active": true
+          }
+        ],
+        "rangedWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-1",
+                "attacks": "3",
+                "damage": "2",
+                "keywords": [
+                  "Twin-linked",
+                  "Sustained Hits 2",
+                  "Pistol",
+                  "Assault"
+                ],
+                "name": "Assault bolters",
+                "range": "18\"",
+                "skill": "3+",
+                "strength": "5"
+              }
+            ]
+          }
+        ],
+        "source": "40k-10e",
+        "stats": [
+          {
+            "active": true,
+            "ld": "6+",
+            "m": "10\"",
+            "name": "Inceptor",
+            "oc": "1",
+            "showDamagedMarker": false,
+            "showName": true,
+            "sv": "3+",
+            "t": "6",
+            "w": "3"
+          }
+        ],
+        "transport": "",
+        "wargear": [
+          "All models in this unit can each have their assault bolters replaced with 1 plasma exterminators."
+        ],
+        "variant": "double",
+        "isCustom": true,
+        "uuid": "9cf1979c-4a12-4415-9617-cea03899736e",
+        "unitSize": {
+          "cost": "120",
+          "keyword": null,
+          "models": "3",
+          "active": true
+        }
+      },
+      {
+        "abilities": {
+          "core": [
+            "Infiltrators"
+          ],
+          "damaged": {
+            "description": "",
+            "range": "",
+            "showDamagedAbility": false,
+            "showDescription": true
+          },
+          "faction": [
+            "Oath of Moment"
+          ],
+          "invul": {
+            "info": "",
+            "showAtTop": true,
+            "showInfo": false,
+            "showInvulnerableSave": false,
+            "value": ""
+          },
+          "other": [
+            {
+              "name": "Omni-scramblers",
+              "description": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\"of this unit.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "primarch": [],
+          "special": [],
+          "wargear": [
+            {
+              "name": "Helix Gauntlet",
+              "description": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
+              "showAbility": true,
+              "showDescription": true
+            },
+            {
+              "name": "Infiltrator Comms Array",
+              "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6:on a 5+, you gain 1CP.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ]
+        },
+        "cardType": "DataCard",
+        "composition": [
+          "1 Infiltrator Sergeant",
+          "4-9 Infiltrators"
+        ],
+        "factions": [
+          "Adeptus Astartes"
+        ],
+        "faction_id": "SM",
+        "fluff": "Infiltrator Squads are experts in covert operations and are drilled extensively in self-sufficiency and survival skills. Equipped with omni-scramblers that cripple enemy communications, they wreak havoc amongst their foes before cutting them down with hails of accurate bolt fire.",
+        "id": "fc597ceb-aa47-52f2-8b47-f92bb8b63b3e",
+        "keywords": [
+          "Infantry",
+          "Grenades",
+          "Smoke",
+          "Imperium",
+          "Phobos",
+          "Infiltrator Squad"
+        ],
+        "leader": "",
+        "loadout": "Every model is equipped with: bolt pistol; marksman bolt carbine; close combat weapon.",
+        "meleeWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "3",
+                "damage": "1",
+                "keywords": [],
+                "name": "Close combat weapon",
+                "range": "Melee",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          }
+        ],
+        "name": "Infiltrator Squad",
+        "points": [
+          {
+            "cost": "200",
+            "keyword": null,
+            "models": "10",
+            "active": true
+          },
+          {
+            "cost": "100",
+            "keyword": null,
+            "models": "5",
+            "active": true
+          }
+        ],
+        "rangedWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "1",
+                "damage": "1",
+                "keywords": [
+                  "Pistol"
+                ],
+                "name": "Bolt pistol",
+                "range": "12\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "2",
+                "damage": "1",
+                "keywords": [
+                  "Heavy"
+                ],
+                "name": "Marksman bolt carbine",
+                "range": "24\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          }
+        ],
+        "source": "40k-10e",
+        "stats": [
+          {
+            "active": true,
+            "ld": "6+",
+            "m": "6\"",
+            "name": "Infiltrator",
+            "oc": "1",
+            "showDamagedMarker": false,
+            "showName": true,
+            "sv": "3+",
+            "t": "4",
+            "w": "2"
+          }
+        ],
+        "transport": "",
+        "wargear": [
+          "* These options cannot be taken on the same model.",
+          "1 Infiltrator can be equipped with 1 Infiltrator comms array.*",
+          "1 Infiltrator can be equipped with 1 helix gauntlet.*"
+        ],
+        "leadBy": [
+          "Librarian in Phobos Armour",
+          "Captain in Phobos Armour",
+          "Lieutenant in Phobos Armour"
+        ],
+        "variant": "double",
+        "isCustom": true,
+        "uuid": "9d6d2d26-144b-4fcf-a7f3-9b5e5478d47a",
+        "unitSize": {
+          "cost": "100",
+          "keyword": null,
+          "models": "5",
+          "active": true
+        }
+      },
+      {
+        "abilities": {
+          "core": [],
+          "damaged": {
+            "description": "",
+            "range": "",
+            "showDamagedAbility": false,
+            "showDescription": true
+          },
+          "faction": [
+            "Oath of Moment"
+          ],
+          "invul": {
+            "info": "",
+            "showAtTop": true,
+            "showInfo": false,
+            "showInvulnerableSave": false,
+            "value": ""
+          },
+          "other": [
+            {
+              "name": "Objective Secured",
+              "description": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+              "showAbility": true,
+              "showDescription": true
+            },
+            {
+              "name": "Target Elimination",
+              "description": "Each time this unit is selected to shoot, it can use this ability. If it does, until the end of the phase, add 2 to the Attacks characteristic of bolt rifles equipped by models in this unit and you can only select one enemy unit as the target of all of this unit’s attacks.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "primarch": [],
+          "special": [],
+          "wargear": []
+        },
+        "cardType": "DataCard",
+        "composition": [
+          "1 Intercessor Sergeant",
+          "4-9 Intercessors"
+        ],
+        "factions": [
+          "Adeptus Astartes"
+        ],
+        "faction_id": "SM",
+        "fluff": "Intercessor Squads are capable of laying down punishing fire while advancing or holding ground against the enemy. They have access to a range of bolt weaponry suited to varied battlefield assignments, from engaging enemies at long range to cleansing bunker complexes.",
+        "id": "ba5159e6-672b-5e6f-a7e1-dd03f49cb4b5",
+        "keywords": [
+          "Infantry",
+          "Battleline",
+          "Grenades",
+          "Imperium",
+          "Tacticus",
+          "Intercessor Squad"
+        ],
+        "leader": "",
+        "loadout": "Every model is equipped with: bolt pistol; bolt rifle; close combat weapon.",
+        "meleeWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "3",
+                "damage": "1",
+                "keywords": [],
+                "name": "Close combat weapon",
+                "range": "Melee",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "3",
+                "damage": "2",
+                "keywords": [],
+                "name": "Power fist",
+                "range": "Melee",
+                "skill": "3+",
+                "strength": "8"
+              }
+            ]
+          }
+        ],
+        "name": "Intercessor Squad",
+        "points": [
+          {
+            "cost": "160",
+            "keyword": null,
+            "models": "10",
+            "active": true
+          },
+          {
+            "cost": "80",
+            "keyword": null,
+            "models": "5",
+            "active": true
+          }
+        ],
+        "rangedWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "1",
+                "damage": "1",
+                "keywords": [
+                  "Pistol"
+                ],
+                "name": "Bolt pistol",
+                "range": "12\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-1",
+                "attacks": "2",
+                "damage": "1",
+                "keywords": [
+                  "Heavy",
+                  "Assault"
+                ],
+                "name": "Bolt rifle",
+                "range": "24\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "1",
+                "damage": "1",
+                "keywords": [
+                  "Pistol"
+                ],
+                "name": "Plasma pistol – Standard",
+                "range": "12\"",
+                "skill": "3+",
+                "strength": "7"
+              },
+              {
+                "active": true,
+                "ap": "-3",
+                "attacks": "1",
+                "damage": "2",
+                "keywords": [
+                  "Pistol",
+                  "Hazardous"
+                ],
+                "name": "Plasma pistol – Supercharge",
+                "range": "12\"",
+                "skill": "3+",
+                "strength": "8"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "1",
+                "damage": "D3",
+                "keywords": [],
+                "name": "Astartes grenade launcher – Krak",
+                "range": "24\"",
+                "skill": "3+",
+                "strength": "9"
+              },
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "D3",
+                "damage": "1",
+                "keywords": [
+                  "Blast"
+                ],
+                "name": "Astartes grenade launcher – Frag",
+                "range": "24\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          }
+        ],
+        "source": "40k-10e",
+        "stats": [
+          {
+            "active": true,
+            "ld": "6+",
+            "m": "6\"",
+            "name": "Intercessor",
+            "oc": "2",
+            "showDamagedMarker": false,
+            "showName": true,
+            "sv": "3+",
+            "t": "4",
+            "w": "2"
+          }
+        ],
+        "transport": "",
+        "wargear": [
+          "For every 5 models in this unit, 1 model equipped with a bolt rifle can be equipped with 1 Astartes grenade launcher.",
+          "The Intercessor Sergeant’s close combat weapon can be replaced with one of the following: ◦ 1 Astartes chainsword ◦ 1 power fist ◦ 1 power weapon ◦ 1 thunder hammer",
+          "The Intercessor Sergeant’s bolt rifle can be replaced with one of the following: ◦ 1 Astartes chainsword ◦ 1 hand flamer ◦ 1 plasma pistol ◦ 1 power weapon"
+        ],
+        "leadBy": [
+          "Adrax Agatone",
+          "Techmarine",
+          "Ezekiel",
+          "Librarian",
+          "Kor’sarro Khan",
+          "Sanguinary Priest",
+          "Judiciar",
+          "Marneus Calgar",
+          "High Marshal Helbrecht",
+          "Uriel Ventris",
+          "Azrael",
+          "Ragnar Blackmane",
+          "Castellan",
+          "Chief Librarian Tigurius",
+          "Blood Angels Captain",
+          "Asmodai",
+          "Apothecary",
+          "Lieutenant",
+          "Ancient",
+          "Marshal",
+          "Lazarus",
+          "The Emperor’s Champion",
+          "Captain",
+          "Chaplain Grimaldus",
+          "Chaplain"
+        ],
+        "isCustom": true,
+        "uuid": "ea8b6f05-6aef-4218-b442-dd790fdd18a2",
+        "unitSize": {
+          "cost": "80",
+          "keyword": null,
+          "models": "5",
+          "active": true
+        }
+      },
+      {
+        "abilities": {
+          "core": [
+            "Infiltrators",
+            "Feel No Pain 5+",
+            "Lone Operative",
+            "Stealth"
+          ],
+          "damaged": {
+            "description": "",
+            "range": "",
+            "showDamagedAbility": false,
+            "showDescription": true
+          },
+          "faction": [
+            "Oath of Moment"
+          ],
+          "invul": {
+            "info": "",
+            "showAtTop": true,
+            "showInfo": false,
+            "showInvulnerableSave": false,
+            "value": ""
+          },
+          "other": [
+            {
+              "name": "Priority Objective Identified",
+              "description": "At the start of the first battle round, if your army includes one or more models with this ability, you can select one objective marker on the battlefield. Until the end of the battle, while one or more models with this ability are on the battlefield, each time a friendly ADEPTUS ASTARTES model makes an attack that targets an enemy unit that is within range of that objective marker, re-roll a Wound roll of 1.",
+              "showAbility": true,
+              "showDescription": true
+            },
+            {
+              "name": "Evade and Survive",
+              "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\"of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "primarch": [],
+          "special": [
+            {
+              "description": "This model cannot be selected as your WARLORD.",
+              "name": "Last Survivor",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "wargear": []
+        },
+        "cardType": "DataCard",
+        "composition": [
+          "1 Lieutenant with Combi-weapon"
+        ],
+        "factions": [
+          "Adeptus Astartes"
+        ],
+        "faction_id": "SM",
+        "fluff": "Some Lieutenants in Phobos armour are tasked with operating behind enemy lines, acting as skilled assassins and intelligence gatherers. By the time the main Space Marine task force has arrived they have cast the enemy into disarray and collected incredible tactical data that will all but guarantee the assault’s success.",
+        "id": "85c1befb-18db-5277-b669-cdab91030a21",
+        "keywords": [
+          "Infantry",
+          "Character",
+          "Grenades",
+          "Imperium",
+          "Phobos",
+          "Lieutenant",
+          "Lieutenant with Combi-weapon"
+        ],
+        "leader": "",
+        "loadout": "This model is equipped with: combi-weapon; paired combat blades.",
+        "meleeWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-1",
+                "attacks": "5",
+                "damage": "1",
+                "keywords": [
+                  "Sustained Hits 1",
+                  "Anti-infantry 4+"
+                ],
+                "name": "Paired combat blades",
+                "range": "Melee",
+                "skill": "2+",
+                "strength": "4"
+              }
+            ]
+          }
+        ],
+        "name": "Lieutenant with Combi-weapon",
+        "points": [
+          {
+            "cost": "70",
+            "keyword": null,
+            "models": "1",
+            "active": true
+          }
+        ],
+        "rangedWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "0",
+                "attacks": "1",
+                "damage": "1",
+                "keywords": [
+                  "Rapid Fire 1",
+                  "Devastating Wounds",
+                  "Anti-infantry 4+"
+                ],
+                "name": "Combi-weapon",
+                "range": "24\"",
+                "skill": "3+",
+                "strength": "4"
+              }
+            ]
+          }
+        ],
+        "source": "40k-10e",
+        "stats": [
+          {
+            "active": true,
+            "ld": "6+",
+            "m": "6\"",
+            "name": "Lieutenant with Combi-weapon",
+            "oc": "1",
+            "showDamagedMarker": false,
+            "showName": false,
+            "sv": "3+",
+            "t": "4",
+            "w": "4"
+          }
+        ],
+        "transport": "",
+        "wargear": [
+          "None"
+        ],
+        "isCustom": true,
+        "uuid": "6492974b-3c48-4157-ba16-5e1839e3067c",
+        "unitSize": {
+          "cost": "70",
+          "keyword": null,
+          "models": "1",
+          "active": true
+        }
+      },
+      {
+        "abilities": {
+          "core": [
+            "Leader"
+          ],
+          "damaged": {
+            "description": "",
+            "range": "",
+            "showDamagedAbility": false,
+            "showDescription": true
+          },
+          "faction": [
+            "Oath of Moment"
+          ],
+          "invul": {
+            "info": "",
+            "showAtTop": true,
+            "showInfo": false,
+            "showInvulnerableSave": true,
+            "value": "4+"
+          },
+          "other": [
+            {
+              "name": "Inspiring Leader",
+              "description": "While this unit is leading a unit and contains a MARNEUS CALGAR model, that unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
+              "showAbility": true,
+              "showDescription": true
+            },
+            {
+              "name": "Master Tactician",
+              "description": "At the start of your Command phase, if this unit’s MARNEUS CALGAR model is on the battlefield, you gain 1CP.",
+              "showAbility": true,
+              "showDescription": true
+            },
+            {
+              "name": "Honour Guard of Macragge",
+              "description": "While this unit contains one or more Victrix Honour Guard models, this unit’s MARNEUS CALGAR model has the Feel No Pain 4+ ability.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ],
+          "primarch": [],
+          "special": [],
+          "wargear": []
+        },
+        "cardType": "DataCard",
+        "composition": [
+          "1 Marneus Calgar – EPIC HERO",
+          "2 Victrix Honour Guard"
+        ],
+        "factions": [
+          "Adeptus Astartes"
+        ],
+        "faction_id": "SM",
+        "fluff": "On the battlefield, Marneus Calgar is an inspiring leader and superlative warrior. He heralds his advance with thunderous volleys of bolt shells from the Gauntlets of Ultramar before tearing apart anything in his grip. When he judges the endgame of his strategy to be imminent, he leads his Ultramarines into the heart of enemy lines.",
+        "id": "0ed43323-83ec-5ecf-b6cb-d754d9cc3bd5",
+        "keywords": [
+          "Infantry",
+          "Imperium",
+          "Character",
+          "Epic Hero",
+          "Gravis",
+          "Chapter Master",
+          "Marneus Calgar"
+        ],
+        "leader": "This unit can be attached to the following units: ■ AGGRESSOR SQUAD ■ ASSAULT INTERCESSOR SQUAD ■ BLADEGUARD VETERAN SQUAD ■ COMPANY HEROES ■ ERADICATOR SQUAD ■ HEAVY INTERCESSOR SQUAD ■ INFERNUS SQUAD ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD ■ TACTICAL SQUAD",
+        "loadout": "Marneus Calgar is equipped with: Gauntlets of Ultramar.\nEvery Victrix Honour Guard is equipped with: Victrix power sword.",
+        "meleeWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-3",
+                "attacks": "6",
+                "damage": "3",
+                "keywords": [
+                  "Twin-linked"
+                ],
+                "name": "Gauntlets of Ultramar – Melee",
+                "range": "Melee",
+                "skill": "2+",
+                "strength": "8"
+              }
+            ]
+          },
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-2",
+                "attacks": "5",
+                "damage": "2",
+                "keywords": [],
+                "name": "Victrix power sword",
+                "range": "Melee",
+                "skill": "2+",
+                "strength": "5"
+              }
+            ]
+          }
+        ],
+        "name": "Marneus Calgar",
+        "points": [
+          {
+            "cost": "210",
+            "keyword": null,
+            "models": "3",
+            "active": true
+          }
+        ],
+        "rangedWeapons": [
+          {
+            "active": true,
+            "profiles": [
+              {
+                "active": true,
+                "ap": "-1",
+                "attacks": "4",
+                "damage": "2",
+                "keywords": [
+                  "Twin-linked",
+                  "Pistol"
+                ],
+                "name": "Gauntlets of Ultramar – Ranged",
+                "range": "18\"",
+                "skill": "2+",
+                "strength": "4"
+              }
+            ]
+          }
+        ],
+        "source": "40k-10e",
+        "stats": [
+          {
+            "active": true,
+            "ld": "6+",
+            "m": "6\"",
+            "name": "Marneus Calgar",
+            "oc": "1",
+            "showDamagedMarker": false,
+            "showName": true,
+            "sv": "2+",
+            "t": "6",
+            "w": "6"
+          },
+          {
+            "active": true,
+            "ld": "6+",
+            "m": "6\"",
+            "name": "Victrix Honour Guard",
+            "oc": "1",
+            "showDamagedMarker": false,
+            "showName": true,
+            "sv": "2+",
+            "t": "4",
+            "w": "3"
+          }
+        ],
+        "transport": "",
+        "wargear": [
+          "None"
+        ],
+        "leads": {
+          "units": [
+            "AGGRESSOR SQUAD",
+            "ASSAULT INTERCESSOR SQUAD",
+            "BLADEGUARD VETERAN SQUAD",
+            "COMPANY HEROES",
+            "ERADICATOR SQUAD",
+            "HEAVY INTERCESSOR SQUAD",
+            "INFERNUS SQUAD",
+            "INTERCESSOR SQUAD",
+            "STERNGUARD VETERAN SQUAD",
+            "TACTICAL SQUAD"
+          ],
+          "extra": ""
+        },
+        "isCustom": true,
+        "uuid": "25312340-9f5d-4022-a242-4895610b1fac",
+        "unitSize": {
+          "cost": "210",
+          "keyword": null,
+          "models": "3",
+          "active": true
+        },
+        "isWarlord": true
+      }
+    ],
+    "closed": false
+  },
+  "createdAt": "2025-05-07T21:53:39.458Z",
+  "version": "2.9.3",
+  "website": "https://game-datacards.eu"
+}
