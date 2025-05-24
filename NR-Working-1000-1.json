@@ -117,7 +117,7 @@
                                         "primary": false
                                     }
                                 ],
-                                "id": "m9mb4ds4e6q9foy1yj",
+                                "id": "mb00aik1uf4ohnj2kd",
                                 "name": "Agents of the Imperium are visible",
                                 "entryId": "9e96-1101-afff-63b7::e08b-2448-5606-fefb",
                                 "number": 1,
@@ -133,7 +133,7 @@
                                         "primary": false
                                     }
                                 ],
-                                "id": "m9mb4ds4yyom6bu0itn",
+                                "id": "mb00aik0qkb7ztxqwct",
                                 "name": "Imperial Knights are visible",
                                 "entryId": "24ae-928e-4edf-9e68::e82c-6f8c-2b97-a287",
                                 "number": 1,
@@ -149,7 +149,7 @@
                                         "primary": false
                                     }
                                 ],
-                                "id": "m9mb4drznhgvrd23pfb",
+                                "id": "mb00aijzknie26hp3v",
                                 "name": "Legends are visible",
                                 "entryId": "882-5a00-1760-a2be::892f-57ca-d650-7199::9ed-cbf4-bfe5-90bf",
                                 "number": 1,
@@ -157,7 +157,7 @@
                                 "from": "entry"
                             },
                             {
-                                "id": "m9mb4ds4ffo1o3wt9ll",
+                                "id": "mb00aik11tnkpzovfm9",
                                 "name": "Titans are visible",
                                 "entryId": "7117-d2ee-6c97-a4ea::f26b-79db-80e0-3a3b",
                                 "number": 1,
@@ -165,7 +165,7 @@
                                 "from": "entry"
                             },
                             {
-                                "id": "m9mb4drz265ot4ie3pk",
+                                "id": "mb00aik0f3eglgmzqe4",
                                 "name": "Unaligned Forces are visible",
                                 "entryId": "882-5a00-1760-a2be::985-e753-2e94-859::2973-ea51-7f8d-5403",
                                 "number": 1,
@@ -173,7 +173,7 @@
                                 "from": "entry"
                             },
                             {
-                                "id": "m9mb4ds43151h8vnqpx",
+                                "id": "mb00aik0kyzw61fjqrd",
                                 "name": "Unaligned Fortifications are visible",
                                 "entryId": "882-5a00-1760-a2be::4d37-22c-a45c-64f8::e916-2cf4-a49d-b8c4",
                                 "number": 1,
@@ -189,7 +189,7 @@
                                 "primary": true
                             }
                         ],
-                        "id": "m9mb4dryeroizuhv855",
+                        "id": "mb00aijyyj9njnv6z7q",
                         "name": "Show/Hide Options",
                         "entryId": "882-5a00-1760-a2be::e8ef-836a-a9d1-901d",
                         "number": 1,
@@ -3562,6 +3562,75 @@
                         ],
                         "selections": [
                             {
+                                "rules": [
+                                    {
+                                        "description": "Some models have 'Feel No Pain x+' listed in their abilities. Each time a model with this ability suffers damage and so would lose a wound (including wounds lost due to mortal wounds), roll one D6: if the result is greater than or equal to the number denoted by 'x: that wound is ignored and is not lost. If a model has more than one Feel No Pain ability, you can only use one of those abilities each time that model suffers damage and so would lose a wound.",
+                                        "id": "9bf4-280f-bbe2-6fbb",
+                                        "name": "Feel No Pain",
+                                        "hidden": false,
+                                        "page": 23
+                                    }
+                                ],
+                                "profiles": [
+                                    {
+                                        "characteristics": [
+                                            {
+                                                "$text": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
+                                                "name": "Description",
+                                                "typeId": "9b8f-694b-e5e-b573"
+                                            }
+                                        ],
+                                        "id": "cd5b-809e-22e9-f34d",
+                                        "name": "Helix Gauntlet",
+                                        "hidden": false,
+                                        "typeId": "9cc3-6d83-4dd3-9b64",
+                                        "typeName": "Abilities",
+                                        "from": "entry"
+                                    }
+                                ],
+                                "associations": [
+                                    {
+                                        "associationId": "fee1-020d-f500-b855"
+                                    }
+                                ],
+                                "id": "mazzuqe30a0g79afz4zd",
+                                "name": "Helix Gauntlet",
+                                "entryId": "5c31-c468-f354-c0a6::bed4-de77-7dfc-63f5",
+                                "number": 1,
+                                "type": "upgrade",
+                                "from": "entry"
+                            },
+                            {
+                                "profiles": [
+                                    {
+                                        "characteristics": [
+                                            {
+                                                "$text": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP",
+                                                "name": "Description",
+                                                "typeId": "9b8f-694b-e5e-b573"
+                                            }
+                                        ],
+                                        "id": "214b-5fbd-3d7-670",
+                                        "name": "Infiltrator Comms Array",
+                                        "hidden": false,
+                                        "typeId": "9cc3-6d83-4dd3-9b64",
+                                        "typeName": "Abilities",
+                                        "from": "entry"
+                                    }
+                                ],
+                                "associations": [
+                                    {
+                                        "associationId": "4266-4b52-f834-2453"
+                                    }
+                                ],
+                                "id": "mazzuqe39p4i55wx5mo",
+                                "name": "Infiltrator Comms Array",
+                                "entryId": "5c31-c468-f354-c0a6::cc8e-25ba-cd27-6f2b",
+                                "number": 1,
+                                "type": "upgrade",
+                                "from": "entry"
+                            },
+                            {
                                 "profiles": [
                                     {
                                         "characteristics": [
@@ -4246,154 +4315,7 @@
                                 "group": "Wargear"
                             },
                             {
-                                "selections": [
-                                    {
-                                        "rules": [
-                                            {
-                                                "description": "Weapons with [TWIN-LINKED] in their profile are known as Twin-linked weapons. Each time an attack is made with such a weapon, you can re-roll that attack’s Wound roll.",
-                                                "id": "cf93-ad4d-2f08-a79d",
-                                                "name": "Twin-linked",
-                                                "hidden": false,
-                                                "page": 25
-                                            }
-                                        ],
-                                        "profiles": [
-                                            {
-                                                "characteristics": [
-                                                    {
-                                                        "$text": "24\"",
-                                                        "name": "Range",
-                                                        "typeId": "9896-9419-16a1-92fc"
-                                                    },
-                                                    {
-                                                        "$text": "4",
-                                                        "name": "A",
-                                                        "typeId": "3bb-c35f-f54-fb08"
-                                                    },
-                                                    {
-                                                        "$text": "3+",
-                                                        "name": "BS",
-                                                        "typeId": "94d-8a98-cf90-183e"
-                                                    },
-                                                    {
-                                                        "$text": "4",
-                                                        "name": "S",
-                                                        "typeId": "2229-f494-25db-c5d3"
-                                                    },
-                                                    {
-                                                        "$text": "-1",
-                                                        "name": "AP",
-                                                        "typeId": "9ead-8a10-520-de15"
-                                                    },
-                                                    {
-                                                        "$text": "1",
-                                                        "name": "D",
-                                                        "typeId": "a354-c1c8-a745-f9e3"
-                                                    },
-                                                    {
-                                                        "$text": "Twin-linked",
-                                                        "name": "Keywords",
-                                                        "typeId": "7f1b-8591-2fcf-d01c"
-                                                    }
-                                                ],
-                                                "id": "a8fd-bc3b-b629-e6a4",
-                                                "name": "Brutalis Bolt Rifles",
-                                                "hidden": false,
-                                                "typeId": "f77d-b953-8fa4-b762",
-                                                "typeName": "Ranged Weapons",
-                                                "from": "entry"
-                                            }
-                                        ],
-                                        "id": "m9mb5h12iobcoblqd6m",
-                                        "name": "Brutalis Bolt Rifles",
-                                        "entryId": "f6b9-71b1-297a-c13a::b8bc-cc4-1d6a-559e",
-                                        "number": 1,
-                                        "type": "upgrade",
-                                        "from": "entry"
-                                    },
-                                    {
-                                        "rules": [
-                                            {
-                                                "description": "Weapons with [TWIN-LINKED] in their profile are known as Twin-linked weapons. Each time an attack is made with such a weapon, you can re-roll that attack’s Wound roll.",
-                                                "id": "cf93-ad4d-2f08-a79d",
-                                                "name": "Twin-linked",
-                                                "hidden": false,
-                                                "page": 25
-                                            }
-                                        ],
-                                        "profiles": [
-                                            {
-                                                "characteristics": [
-                                                    {
-                                                        "$text": "Melee",
-                                                        "name": "Range",
-                                                        "typeId": "914c-b413-91e3-a132"
-                                                    },
-                                                    {
-                                                        "$text": "6",
-                                                        "name": "A",
-                                                        "typeId": "2337-daa1-6682-b110"
-                                                    },
-                                                    {
-                                                        "$text": "3+",
-                                                        "name": "WS",
-                                                        "typeId": "95d1-95f-45b4-11d6"
-                                                    },
-                                                    {
-                                                        "$text": "12",
-                                                        "name": "S",
-                                                        "typeId": "ab33-d393-96ce-ccba"
-                                                    },
-                                                    {
-                                                        "$text": "-2",
-                                                        "name": "AP",
-                                                        "typeId": "41a0-1301-112a-e2f2"
-                                                    },
-                                                    {
-                                                        "$text": "3",
-                                                        "name": "D",
-                                                        "typeId": "3254-9fe6-d824-513e"
-                                                    },
-                                                    {
-                                                        "$text": "Twin-linked",
-                                                        "name": "Keywords",
-                                                        "typeId": "893f-9000-ccf7-648e"
-                                                    }
-                                                ],
-                                                "id": "bf72-380a-edcf-816a",
-                                                "name": "Brutalis Fists",
-                                                "hidden": false,
-                                                "typeId": "8a40-4aaa-c780-9046",
-                                                "typeName": "Melee Weapons",
-                                                "from": "entry"
-                                            }
-                                        ],
-                                        "id": "m9mb5h12gkood8qqwq4",
-                                        "name": "Brutalis Fists",
-                                        "entryId": "f6b9-71b1-297a-c13a::a45d-5a4-fd3b-fbe",
-                                        "number": 1,
-                                        "type": "upgrade",
-                                        "from": "entry"
-                                    }
-                                ],
-                                "id": "m9mb5h0xqwgxgtc9r1",
-                                "name": "Brutalis Fists & Brutalis Bolt Rifles",
-                                "entryId": "f6b9-71b1-297a-c13a::fbd7-1d77-add6-15f1",
-                                "entryGroupId": "f6b9-71b1-297a-c13a::6099-9d44-6aee-cd5b",
-                                "number": 1,
-                                "type": "upgrade",
-                                "from": "group",
-                                "group": "Wargear::Melee Weapon Option"
-                            },
-                            {
                                 "rules": [
-                                    {
-                                        "description": "Weapons with [SUSTAINED HITS X] in their profile are known as Sustained Hits weapons. Each time an attack is made with such a weapon, if a Critical Hit is rolled, that attack scores a number of additional hits on the target as denoted by ‘x’",
-                                        "id": "1897-c22c-9597-12b1",
-                                        "name": "Sustained Hits",
-                                        "hidden": false,
-                                        "page": 28
-                                    },
                                     {
                                         "description": "Weapons with [TWIN-LINKED] in their profile are known as Twin-linked weapons. Each time an attack is made with such a weapon, you can re-roll that attack’s Wound roll.",
                                         "id": "cf93-ad4d-2f08-a79d",
@@ -4406,12 +4328,130 @@
                                     {
                                         "characteristics": [
                                             {
-                                                "$text": "36\"",
+                                                "$text": "Melee",
+                                                "name": "Range",
+                                                "typeId": "914c-b413-91e3-a132"
+                                            },
+                                            {
+                                                "$text": "6",
+                                                "name": "A",
+                                                "typeId": "2337-daa1-6682-b110"
+                                            },
+                                            {
+                                                "$text": "3+",
+                                                "name": "WS",
+                                                "typeId": "95d1-95f-45b4-11d6"
+                                            },
+                                            {
+                                                "$text": "12",
+                                                "name": "S",
+                                                "typeId": "ab33-d393-96ce-ccba"
+                                            },
+                                            {
+                                                "$text": "-2",
+                                                "name": "AP",
+                                                "typeId": "41a0-1301-112a-e2f2"
+                                            },
+                                            {
+                                                "$text": "3",
+                                                "name": "D",
+                                                "typeId": "3254-9fe6-d824-513e"
+                                            },
+                                            {
+                                                "$text": "Twin-linked",
+                                                "name": "Keywords",
+                                                "typeId": "893f-9000-ccf7-648e"
+                                            }
+                                        ],
+                                        "id": "a042-66db-3ce0-a3ab",
+                                        "name": "➤ Brutalis Talons - Strike",
+                                        "hidden": false,
+                                        "typeId": "8a40-4aaa-c780-9046",
+                                        "typeName": "Melee Weapons",
+                                        "from": "entry"
+                                    },
+                                    {
+                                        "characteristics": [
+                                            {
+                                                "$text": "Melee",
+                                                "name": "Range",
+                                                "typeId": "914c-b413-91e3-a132"
+                                            },
+                                            {
+                                                "$text": "10",
+                                                "name": "A",
+                                                "typeId": "2337-daa1-6682-b110"
+                                            },
+                                            {
+                                                "$text": "3+",
+                                                "name": "WS",
+                                                "typeId": "95d1-95f-45b4-11d6"
+                                            },
+                                            {
+                                                "$text": "7",
+                                                "name": "S",
+                                                "typeId": "ab33-d393-96ce-ccba"
+                                            },
+                                            {
+                                                "$text": "-2",
+                                                "name": "AP",
+                                                "typeId": "41a0-1301-112a-e2f2"
+                                            },
+                                            {
+                                                "$text": "1",
+                                                "name": "D",
+                                                "typeId": "3254-9fe6-d824-513e"
+                                            },
+                                            {
+                                                "$text": "Twin-linked",
+                                                "name": "Keywords",
+                                                "typeId": "893f-9000-ccf7-648e"
+                                            }
+                                        ],
+                                        "id": "7048-2ef3-7430-e152",
+                                        "name": "➤ Brutalis Talons - Sweep",
+                                        "hidden": false,
+                                        "typeId": "8a40-4aaa-c780-9046",
+                                        "typeName": "Melee Weapons",
+                                        "from": "entry"
+                                    }
+                                ],
+                                "id": "mazzuqe7dv1rfy5y0ua",
+                                "name": "Brutalis Talons",
+                                "entryId": "f6b9-71b1-297a-c13a::3221-309e-810a-39a9",
+                                "entryGroupId": "f6b9-71b1-297a-c13a::6099-9d44-6aee-cd5b",
+                                "number": 1,
+                                "type": "upgrade",
+                                "from": "group",
+                                "group": "Wargear::Melee Weapon Option"
+                            },
+                            {
+                                "rules": [
+                                    {
+                                        "description": "Weapons with [TWIN-LINKED] in their profile are known as Twin-linked weapons. Each time an attack is made with such a weapon, you can re-roll that attack’s Wound roll.",
+                                        "id": "cf93-ad4d-2f08-a79d",
+                                        "name": "Twin-linked",
+                                        "hidden": false,
+                                        "page": 25
+                                    },
+                                    {
+                                        "description": "Weapons with [MELTA X] in their profile are known as Melta weapons. Each time an attack made with such a weapon targets a unit within half that weapon’s range, that attack’s Damage characteristic is increased by the amount denoted by ‘x’.",
+                                        "id": "7cdb-fb99-44a9-8849",
+                                        "name": "Melta",
+                                        "hidden": false,
+                                        "page": 26
+                                    }
+                                ],
+                                "profiles": [
+                                    {
+                                        "characteristics": [
+                                            {
+                                                "$text": "18\"",
                                                 "name": "Range",
                                                 "typeId": "9896-9419-16a1-92fc"
                                             },
                                             {
-                                                "$text": "3",
+                                                "$text": "2",
                                                 "name": "A",
                                                 "typeId": "3bb-c35f-f54-fb08"
                                             },
@@ -4421,37 +4461,37 @@
                                                 "typeId": "94d-8a98-cf90-183e"
                                             },
                                             {
-                                                "$text": "5",
+                                                "$text": "9",
                                                 "name": "S",
                                                 "typeId": "2229-f494-25db-c5d3"
                                             },
                                             {
-                                                "$text": "-1",
+                                                "$text": "-4",
                                                 "name": "AP",
                                                 "typeId": "9ead-8a10-520-de15"
                                             },
                                             {
-                                                "$text": "2",
+                                                "$text": "D6",
                                                 "name": "D",
                                                 "typeId": "a354-c1c8-a745-f9e3"
                                             },
                                             {
-                                                "$text": "Sustained Hits 1, Twin-linked",
+                                                "$text": "Melta 2, Twin-linked",
                                                 "name": "Keywords",
                                                 "typeId": "7f1b-8591-2fcf-d01c"
                                             }
                                         ],
-                                        "id": "edd0-6f1c-83e7-c0ea",
-                                        "name": "Twin Heavy Bolter",
+                                        "id": "5eb7-47-da8a-4283",
+                                        "name": "Twin Multi-melta",
                                         "hidden": false,
                                         "typeId": "f77d-b953-8fa4-b762",
                                         "typeName": "Ranged Weapons",
                                         "from": "entry"
                                     }
                                 ],
-                                "id": "m9mb5h0yjnndok5jg1e",
-                                "name": "Twin Heavy Bolter",
-                                "entryId": "f6b9-71b1-297a-c13a::e99e-b2c0-4c80-779b::d107-1e89-9d3f-c9c7",
+                                "id": "mazzuqe7w6s8eqsmjwn",
+                                "name": "Twin Multi-melta",
+                                "entryId": "f6b9-71b1-297a-c13a::9537-75fb-b520-a005::6fad-2d0d-8ff9-5f8f",
                                 "entryGroupId": "f6b9-71b1-297a-c13a::da4-fa24-f9c9-bdc0",
                                 "number": 1,
                                 "type": "upgrade",
@@ -4890,7 +4930,7 @@
                 "categories": [
                     {
                         "name": "Uncategorized",
-                        "id": "magcbol04tvfg2aqo4g",
+                        "id": "mb0wfps5o0icopbj6a",
                         "primary": false,
                         "entryId": "(No Category)"
                     },
@@ -4926,25 +4966,25 @@
                     },
                     {
                         "name": "Swarm",
-                        "id": "magcbol1pgy5bgpetqf",
+                        "id": "mb0wfps6iisely10kk",
                         "primary": false,
                         "entryId": "b00b-5bae-444f-964e"
                     },
                     {
                         "name": "Mounted",
-                        "id": "magcbol1x3282pdcskk",
+                        "id": "mb0wfps6cxpbaucv3vj",
                         "primary": false,
                         "entryId": "14a0-40c9-2748-ae6e"
                     },
                     {
                         "name": "Beast",
-                        "id": "magcbol218ur5b6f9wk",
+                        "id": "mb0wfps686ebdd8a8iv",
                         "primary": false,
                         "entryId": "4c3e-9310-a516-3590"
                     },
                     {
                         "name": "Monster",
-                        "id": "magcbol29u77x3cmu8m",
+                        "id": "mb0wfps66r6xomfi6dv",
                         "primary": false,
                         "entryId": "9693-cf84-fe69-37a9"
                     },
@@ -4956,7 +4996,7 @@
                     },
                     {
                         "name": "Drone",
-                        "id": "magcbol20xgc03ei8ago",
+                        "id": "mb0wfps6ah0adihfcja",
                         "primary": false,
                         "entryId": "2471-e2e0-3f55-d6cb"
                     },
@@ -4968,25 +5008,25 @@
                     },
                     {
                         "name": "Fortification",
-                        "id": "magcbol27h0fx4n8an5",
+                        "id": "mb0wfps7o3gih3lpt3m",
                         "primary": false,
                         "entryId": "19d7-9c74-2140-5851"
                     },
                     {
                         "name": "Unit",
-                        "id": "magcbol2tovxzsz0ypi",
+                        "id": "mb0wfps79jdun8aegv9",
                         "primary": false,
                         "entryId": "1160-70ae-a862-b1a8"
                     },
                     {
                         "name": "Allied Units",
-                        "id": "magcbol2rehx65nnvn9",
+                        "id": "mb0wfps78314ei4e96m",
                         "primary": false,
                         "entryId": "887b-ab87-92a2-20f5"
                     },
                     {
                         "name": "Illegal Units",
-                        "id": "magcbol2tfd54gd4px",
+                        "id": "mb0wfps71uob72javb4",
                         "primary": false,
                         "entryId": "(Illegal Units)"
                     }
@@ -5005,7 +5045,7 @@
         "generatedBy": "https://newrecruit.eu",
         "gameSystemId": "sys-352e-adc2-7639-d6a9",
         "gameSystemName": "Warhammer 40,000 10th Edition",
-        "gameSystemRevision": 36,
+        "gameSystemRevision": 37,
         "xmlns": "http://www.battlescribe.net/schema/rosterSchema"
     }
 }
