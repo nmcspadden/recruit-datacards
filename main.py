@@ -164,29 +164,106 @@ def read_json_file(file_path: str) -> Dict[str, Any]:
         raise
 
 
+def find_detachment_index(index_db: Dict[str, Any], detachment_name: str) -> Optional[int]:
+    """
+    Perform a deep search through the index_db for a matching detachment, then return the index of it.
+    
+    Args:
+        index_db (Dict[str, Any]): The index_db from the GD export keyvaluepairs key
+        detachment_name (str): The name of the detachment to search for
+        
+    Returns:
+        Optional[int]: The matching index of the indexdb data if found, None otherwise
+    """
+    # Convert target to lowercase for case-insensitive comparison
+    target = detachment_name.lower()
+
+    if "data" not in index_db:
+        print("This is not a valid index_db keyvaluepair; it must contain a 'data' key")
+        return None
+    
+    # First check if this dict has a detachments key
+    index = 0
+    for army in index_db["data"]:
+        index += 1
+        # Search through the detachments list
+        for detachment in army['detachments']:
+            if detachment.lower() == target:
+                print(f"Found detachment: {detachment} at index {index}")
+                return index    
+    return None
+
+
+def read_index_json(file_path: str) -> Dict[str, Any]:
+    """
+    Read and parse the IndexDB JSON file.
+    """
+    gd_json_data: Dict[str, Any] = read_json_file("GD-Exported-Data.json")
+    print("Successfully read IndexDB file")
+    # As of 5/24/25, this contains two keyvaluepairs - two separate versions.
+    # The second index has the later version, so we'll just hardcode it for now.
+    return gd_json_data["keyvaluepairs"][1]
+    # TODO: We should eventually move this into an object that can be referred to - 
+    # ideally, we separate army by army since that's generally going to be fixed
+
+
+def read_newrecruit_json(file_path: str) -> Dict[str, Any]:
+    """
+    Read and parse the New Recruit JSON file.
+    """
+    return read_json_file(file_path)
+
+
 def main():
-    """
-    Main function to read and process a JSON file.
-    """
     if len(sys.argv) != 2:
-        print("Usage: python main.py <json_file_path>")
+        print("Usage: python main.py <New Recruit json_file_path>")
+        sys.exit(1)
+
+    # First, read in the IndexDB Exported Data from GD
+    try:
+        index_db = read_index_json("GD-Exported-Data.json")
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("Couldn't read the IndexDB file exported from Game-Datacards")
+        sys.exit(1)
+
+    # Now, read in the New Recruit JSON file
+    try:
+        nr_json_data = read_newrecruit_json(sys.argv[1])
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("Couldn't read the New Recruit file")
         sys.exit(1)
 
     file_path = sys.argv[1]
     try:
         # Store the JSON data in a dictionary
-        json_data: Dict[str, Any] = read_json_file(file_path)
+        nr_json_data: Dict[str, Any] = read_json_file(file_path)
         print("Successfully read JSON file")
-        # print(json.dumps(json_data, indent=2))
-
-        # Now you can use json_data dictionary throughout your program
-        # For example:
-        # print(json_data.keys())  # Print all top-level keys
-        # print(json_data['roster'])  # Access specific data
-        # print(json.dumps(json_data['roster'], indent=2))
 
         # Looking for specific data in the JSON file
-        force = json_data["roster"]["forces"][0]
+        force = nr_json_data["roster"]["forces"][0]
+        catalogue_name_raw: str = force.get("catalogueName", "")
+        catalogue_parts = catalogue_name_raw.split(" - ")
+        side = catalogue_parts[0]
+        faction = catalogue_parts[1]
+        subfaction = catalogue_parts[2]
+        print(f"Side: {side}")
+        print(f"Faction: {faction}")
+        print(f"Subfaction: {subfaction}")
+
+        # The best way to figure out which faction we have in
+        # common between NR and GD is the Detachment
+        # TODO: this is hardcoded for now
+        # get_detachment_name(nr_json_data)
+        detachment_name = "Gladius Task Force"
+        if detachment_name:
+            print(f"Found detachment: {detachment_name}")
+            detachment_index = find_detachment_index(index_db, detachment_name)
+            if detachment_index:
+                print(f"Found matching detachment data: {detachment_index}")
+            else:
+                print(f"No matching detachment data found for {detachment_index}")
+        else:
+            print("No detachment name provided")
 
         # Iterate through forces to find 'army roster'
         if force.get("name", "").lower() != "army roster":
