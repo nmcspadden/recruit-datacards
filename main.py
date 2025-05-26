@@ -8,6 +8,98 @@ import uuid
 from typing import Dict, List, Any, Optional, Tuple
 
 
+class ArmyForce:
+    """Represents a force in the NR army JSON"""
+    def __init__(self, file_path: str):
+        self.nr_json_file_path: str = file_path
+        # This will throw an exception if it fails
+        # Now we need to parse the data from the New Recruit JSON file
+        self.nr_json_data: Dict[str, Any] = read_newrecruit_json(self.nr_json_file_path)
+
+        self.detachment: str = "Fake Detachment Force"
+        self.units = list() # List of Units
+        self.points: int = 0 # Total points of the force
+        self.side: str = "Imperium?" # Flavor name of side
+        self.faction: str = "Adeptus Astartes?" # Flavor name of faction
+        self.subfaction: str = "Megamarines" # Flavor name of subfaction
+
+        self.parse_nr_data()
+        
+    def parse_nr_data(self):
+        """
+        Get the detachment name from the index data.
+        """
+        # The path to the detachment is:
+        # "roster" -> "forces" -> "selections" -> "selections" -> "group" = "Detachment"
+        # In Test List.json, the Detachment is forces[0]["selections"][1]["selections"][0]["group"] = "Detachment"
+        for force in self.nr_json_data["roster"]["forces"]:
+            catalogue_name_raw: str = force.get("catalogueName", "")
+            catalogue_parts = catalogue_name_raw.split(" - ")
+            self.side = catalogue_parts[0]
+            self.faction = catalogue_parts[1]
+            self.subfaction = catalogue_parts[2]
+            print(f"Side: {self.side}")
+            print(f"Faction: {self.faction}")
+            print(f"Subfaction: {self.subfaction}")
+
+            for selection in force["selections"]:
+                item_name = selection.get("name", "")
+                if item_name.lower() == "show/hide options":
+                    continue
+                for new_selection in selection["selections"]:
+                    if new_selection.get("group", "").lower() == "detachment":
+                        self.detachment = new_selection["name"]
+                        print(f"Detachment name: {self.detachment}")
+                    elif new_selection.get("group", "").lower() == "battle size":
+                        self.battle_size = new_selection["name"]
+                        print(f"Battle Size: {self.battle_size}")
+                if item_name.lower() == "battle size" or item_name.lower() == "detachment":
+                    # We already got these earlier
+                    continue
+
+                print(f"* {item_name}")
+                # Now we are actually looking through the army
+                # TODO: Things we need to actually inspect:
+                # - Wargear Selections
+                # - Unit Size
+                # - Leading/Attachment
+                for selection in selection["selections"]:
+                    print(f"** {selection['name']}: {selection['number']}")
+
+    def print_nr_army(self):
+        """
+        Print the army list from the New Recruit data.
+        """
+        force = self.nr_json_data["roster"]["forces"][0]
+        # Iterate through forces to find 'army roster'
+        if force.get("name", "").lower() != "army roster":
+            print("Couldn't find army roster!")
+            sys.exit(1)
+
+        # Iterate through selections, skipping specific items
+        # if "selections" in force:
+            # The first one is typically "Battle Size"
+            # for selection in force["selections"]:
+                # item_name = selection.get("name", "")
+                # if item_name == "Battle Size":
+                #     print(f"Battle Size: {selection['selections'][0]['name']}")
+                #     continue
+                # if item_name == "Detachment":
+                #     print(f"Detachment: {selection['selections'][0]['name']}")
+                #     continue
+                # if item_name == "Show/Hide Options":
+                #     continue
+
+                # print(f"* {item_name}")
+                # # Now we are actually looking through the army
+                # # Things we need to actually inspect:
+                # # - Wargear Selections
+                # # - Unit Size
+                # # - Leading/Attachment
+                # for selection in selection["selections"]:
+                #     print(f"** {selection['name']}: {selection['number']}")
+
+
 class Unit:
     def __init__(self, name: str):
         self.abilities: List[Any] = (
@@ -164,7 +256,7 @@ def read_json_file(file_path: str) -> Dict[str, Any]:
         raise
 
 
-def find_detachment_index(index_db: Dict[str, Any], detachment_name: str) -> Optional[int]:
+def find_gd_detachment_index(index_db: Dict[str, Any], detachment_name: str) -> Optional[int]:
     """
     Perform a deep search through the index_db for a matching detachment, then return the index of it.
     
@@ -185,12 +277,12 @@ def find_detachment_index(index_db: Dict[str, Any], detachment_name: str) -> Opt
     # First check if this dict has a detachments key
     index = 0
     for army in index_db["data"]:
-        index += 1
         # Search through the detachments list
         for detachment in army['detachments']:
             if detachment.lower() == target:
                 print(f"Found detachment: {detachment} at index {index}")
                 return index    
+        index += 1
     return None
 
 
@@ -203,8 +295,6 @@ def read_index_json(file_path: str) -> Dict[str, Any]:
     # As of 5/24/25, this contains two keyvaluepairs - two separate versions.
     # The second index has the later version, so we'll just hardcode it for now.
     return gd_json_data["keyvaluepairs"][1]
-    # TODO: We should eventually move this into an object that can be referred to - 
-    # ideally, we separate army by army since that's generally going to be fixed
 
 
 def read_newrecruit_json(file_path: str) -> Dict[str, Any]:
@@ -226,38 +316,18 @@ def main():
         print("Couldn't read the IndexDB file exported from Game-Datacards")
         sys.exit(1)
 
-    # Now, read in the New Recruit JSON file
+    file_path = sys.argv[1]
     try:
-        nr_json_data = read_newrecruit_json(sys.argv[1])
+        army_force = ArmyForce(file_path)
     except (FileNotFoundError, json.JSONDecodeError):
         print("Couldn't read the New Recruit file")
         sys.exit(1)
 
-    file_path = sys.argv[1]
     try:
-        # Store the JSON data in a dictionary
-        nr_json_data: Dict[str, Any] = read_json_file(file_path)
-        print("Successfully read JSON file")
-
-        # Looking for specific data in the JSON file
-        force = nr_json_data["roster"]["forces"][0]
-        catalogue_name_raw: str = force.get("catalogueName", "")
-        catalogue_parts = catalogue_name_raw.split(" - ")
-        side = catalogue_parts[0]
-        faction = catalogue_parts[1]
-        subfaction = catalogue_parts[2]
-        print(f"Side: {side}")
-        print(f"Faction: {faction}")
-        print(f"Subfaction: {subfaction}")
-
         # The best way to figure out which faction we have in
         # common between NR and GD is the Detachment
-        # TODO: this is hardcoded for now
-        # get_detachment_name(nr_json_data)
-        detachment_name = "Gladius Task Force"
-        if detachment_name:
-            print(f"Found detachment: {detachment_name}")
-            detachment_index = find_detachment_index(index_db, detachment_name)
+        if army_force.detachment:
+            detachment_index = find_gd_detachment_index(index_db, army_force.detachment)
             if detachment_index:
                 print(f"Found matching detachment data: {detachment_index}")
             else:
@@ -265,34 +335,8 @@ def main():
         else:
             print("No detachment name provided")
 
-        # Iterate through forces to find 'army roster'
-        if force.get("name", "").lower() != "army roster":
-            print("Couldn't find army roster!")
-            sys.exit(1)
-
-        # Iterate through selections, skipping specific items
-        if "selections" in force:
-            # The first one is typically "Battle Size"
-            for selection in force["selections"]:
-                item_name = selection.get("name", "")
-                if item_name == "Battle Size":
-                    print(f"Battle Size: {selection['selections'][0]['name']}")
-                    continue
-                if item_name == "Detachment":
-                    print(f"Detachment: {selection['selections'][0]['name']}")
-                    continue
-                if item_name == "Show/Hide Options":
-                    continue
-
-                print(f"* {item_name}")
-                # Now we are actually looking through the army
-                # Things we need to actually inspect:
-                # - Wargear Selections
-                # - Unit Size
-                # - Leading/Attachment
-                for selection in selection["selections"]:
-                    print(f"** {selection['name']}: {selection['number']}")
-
+        # print("Printing New Recruit army:")
+        # print_nr_army(nr_json_data)
 
 
     except (FileNotFoundError, json.JSONDecodeError):
