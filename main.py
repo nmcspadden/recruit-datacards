@@ -12,6 +12,16 @@ class ArmyForce:
     """Represents a force in the NR army JSON"""
 
     def __init__(self, file_path: str):
+        """
+        Initialize a new ArmyForce instance from a New Recruit JSON file.
+
+        Args:
+            file_path (str): Path to the New Recruit JSON file
+
+        Raises:
+            FileNotFoundError: If the file doesn't exist
+            json.JSONDecodeError: If the file contains invalid JSON
+        """
         self.nr_json_file_path: str = file_path
         # This will throw an exception if it fails
         # Now we need to parse the data from the New Recruit JSON file
@@ -28,7 +38,19 @@ class ArmyForce:
 
     def parse_nr_data(self):
         """
-        Get the detachment name from the index data.
+        Parse the New Recruit JSON data to extract force information.
+
+        This method:
+        1. Extracts the side, faction, and subfaction from the catalogue name
+        2. Finds the detachment and battle size information
+        3. Processes unit selections and their configurations
+
+        The data is stored in the instance variables:
+        - side: The side of the force (e.g., "Imperium")
+        - faction: The faction name (e.g., "Adeptus Astartes")
+        - subfaction: The subfaction name (e.g., "Ultramarines")
+        - detachment: The selected detachment
+        - battle_size: The selected battle size
         """
         # The path to the detachment is:
         # "roster" -> "forces" -> "selections" -> "selections" -> "group" = "Detachment"
@@ -72,7 +94,14 @@ class ArmyForce:
 
     def print_nr_army(self):
         """
-        Print the army list from the New Recruit data.
+        Print a formatted representation of the army list from the New Recruit data.
+
+        This method:
+        1. Verifies the army roster exists
+        2. Prints the army composition including:
+           - Battle size
+           - Detachment
+           - Units and their configurations
         """
         force = self.nr_json_data["roster"]["forces"][0]
         # Iterate through forces to find 'army roster'
@@ -316,7 +345,17 @@ def find_gd_detachment_index(
 
 def read_index_json(file_path: str) -> Dict[str, Any]:
     """
-    Read and parse the IndexDB JSON file.
+    Read and parse the IndexDB JSON file from Game-Datacards export.
+
+    Args:
+        file_path (str): Path to the Game-Datacards exported JSON file
+
+    Returns:
+        Dict[str, Any]: The parsed index database from the second keyvaluepair (most recent version)
+
+    Raises:
+        FileNotFoundError: If the file doesn't exist
+        json.JSONDecodeError: If the file contains invalid JSON
     """
     gd_json_data: Dict[str, Any] = read_json_file("GD-Exported-Data.json")
     print("Successfully read IndexDB file")
@@ -326,6 +365,21 @@ def read_index_json(file_path: str) -> Dict[str, Any]:
 
 
 def main():
+    """
+    Main entry point for the program. Processes a New Recruit army list and compares it with Game-Datacards data.
+
+    The program:
+    1. Reads the Game-Datacards index database
+    2. Reads and parses the New Recruit army list
+    3. Compares the detachment information between the two sources
+    4. Prints the results of the comparison
+
+    Command line arguments:
+        sys.argv[1]: Path to the New Recruit JSON file to process
+
+    Raises:
+        SystemExit: If required files are missing or invalid
+    """
     if len(sys.argv) != 2:
         print("Usage: python main.py <New Recruit json_file_path>")
         sys.exit(1)
@@ -350,15 +404,10 @@ def main():
     # common between NR and GD is the Detachment
     if army_force.detachment:
         detachment_index = find_gd_detachment_index(index_db, army_force.detachment)
-        if detachment_index:
-            print(f"Found matching detachment data: {detachment_index}")
-        else:
+        if not detachment_index:
             print(f"No matching detachment data found for {detachment_index}")
     else:
         print("No detachment name provided")
-
-    # print("Printing New Recruit army:")
-    # print_nr_army(nr_json_data)
 
 
 if __name__ == "__main__":
