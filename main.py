@@ -10,21 +10,22 @@ from typing import Dict, List, Any, Optional, Tuple
 
 class ArmyForce:
     """Represents a force in the NR army JSON"""
+
     def __init__(self, file_path: str):
         self.nr_json_file_path: str = file_path
         # This will throw an exception if it fails
         # Now we need to parse the data from the New Recruit JSON file
-        self.nr_json_data: Dict[str, Any] = read_newrecruit_json(self.nr_json_file_path)
+        self.nr_json_data: Dict[str, Any] = read_json_file(self.nr_json_file_path)
 
         self.detachment: str = "Fake Detachment Force"
-        self.units = list() # List of Units
-        self.points: int = 0 # Total points of the force
-        self.side: str = "Imperium?" # Flavor name of side
-        self.faction: str = "Adeptus Astartes?" # Flavor name of faction
-        self.subfaction: str = "Megamarines" # Flavor name of subfaction
+        self.units = list()  # List of Units
+        self.points: int = 0  # Total points of the force
+        self.side: str = "Imperium?"  # Flavor name of side
+        self.faction: str = "Adeptus Astartes?"  # Flavor name of faction
+        self.subfaction: str = "Megamarines"  # Flavor name of subfaction
 
         self.parse_nr_data()
-        
+
     def parse_nr_data(self):
         """
         Get the detachment name from the index data.
@@ -53,7 +54,10 @@ class ArmyForce:
                     elif new_selection.get("group", "").lower() == "battle size":
                         self.battle_size = new_selection["name"]
                         print(f"Battle Size: {self.battle_size}")
-                if item_name.lower() == "battle size" or item_name.lower() == "detachment":
+                if (
+                    item_name.lower() == "battle size"
+                    or item_name.lower() == "detachment"
+                ):
                     # We already got these earlier
                     continue
 
@@ -78,26 +82,26 @@ class ArmyForce:
 
         # Iterate through selections, skipping specific items
         # if "selections" in force:
-            # The first one is typically "Battle Size"
-            # for selection in force["selections"]:
-                # item_name = selection.get("name", "")
-                # if item_name == "Battle Size":
-                #     print(f"Battle Size: {selection['selections'][0]['name']}")
-                #     continue
-                # if item_name == "Detachment":
-                #     print(f"Detachment: {selection['selections'][0]['name']}")
-                #     continue
-                # if item_name == "Show/Hide Options":
-                #     continue
+        # The first one is typically "Battle Size"
+        # for selection in force["selections"]:
+        # item_name = selection.get("name", "")
+        # if item_name == "Battle Size":
+        #     print(f"Battle Size: {selection['selections'][0]['name']}")
+        #     continue
+        # if item_name == "Detachment":
+        #     print(f"Detachment: {selection['selections'][0]['name']}")
+        #     continue
+        # if item_name == "Show/Hide Options":
+        #     continue
 
-                # print(f"* {item_name}")
-                # # Now we are actually looking through the army
-                # # Things we need to actually inspect:
-                # # - Wargear Selections
-                # # - Unit Size
-                # # - Leading/Attachment
-                # for selection in selection["selections"]:
-                #     print(f"** {selection['name']}: {selection['number']}")
+        # print(f"* {item_name}")
+        # # Now we are actually looking through the army
+        # # Things we need to actually inspect:
+        # # - Wargear Selections
+        # # - Unit Size
+        # # - Leading/Attachment
+        # for selection in selection["selections"]:
+        #     print(f"** {selection['name']}: {selection['number']}")
 
 
 class Unit:
@@ -111,16 +115,18 @@ class Unit:
         self.factions: List[str] = (
             list(),
         )  # TODO: list of factions this belongs to; each index is a line
-        self.faction_id: str = "faction_id",  # TODO: hardcoded list of possible faction ids
+        self.faction_id: str = (
+            "faction_id",
+        )  # TODO: hardcoded list of possible faction ids
         self.fluff: str = "fluff"  # flavor text
         self.keywords: List[str] = (
             list(),
         )  # TODO: list of unit keywords; each index is a keyword
-        self.leader: str = "" # leader assigned? Not sure what this refers to
+        self.leader: str = ""  # leader assigned? Not sure what this refers to
         self.loadout: str = "loadout fluff"  # flavor text explaining default loadouts
         self.meleeWeapons: List[Any] = (list(),)  # TODO: figure out data structure
         self.name: str = name  # Actual name of unit
-        self.points: List[Points] = [], #TODO: this needs a CARD data type
+        self.points: List[Points] = ([],)  # TODO: this needs a CARD data type
 
 
 class DataCardShell:
@@ -131,36 +137,48 @@ class DataCardShell:
                 "name": name,
                 "type": "list",
                 "closed": False,
-                "cards": list(), #TODO: fill out cards
+                "cards": list(),  # TODO: fill out cards
             },
         )
         self.created_at: str = ("some_date",)  # generate a timestamp
         self.version: str = ("2.9.3",)
         self.website: str = "https://game-datacards.eu"
 
+
 class Points:
     """Arbitrary structure used to represent the point costs of a unit"""
+
     def __init__(self, cost_grouping: Optional[Tuple[str, str]]):
         # These are fake values that should never be used, which means it's missing data
-        self.cost = "10000",
+        self.cost = ("10000",)
         self.models: "500"
         if cost_grouping:
-            self.cost = cost_grouping[0],
+            self.cost = (cost_grouping[0],)
             self.model_count = cost_grouping[1]
         # The following seem to be fixed values and shouldn't be changed
-        self.keyword = None,
-        self.active: bool = True,
+        self.keyword = (None,)
+        self.active: bool = (True,)
 
 
 class UnitStats:
     """The basic stat line of a data sheet"""
-    def __init__(self, move: str, toughness: str, save: str, weapon: str, leadership: str, objctrl: str, name: str):
-        self.name = name,
-        self.m = move,
-        self.t = toughness,
-        self.sv = save,
-        self.w = weapon,
-        self.ld = leadership,
+
+    def __init__(
+        self,
+        move: str,
+        toughness: str,
+        save: str,
+        weapon: str,
+        leadership: str,
+        objctrl: str,
+        name: str,
+    ):
+        self.name = (name,)
+        self.m = (move,)
+        self.t = (toughness,)
+        self.sv = (save,)
+        self.w = (weapon,)
+        self.ld = (leadership,)
         self.oc = objctrl
 
 
@@ -169,33 +187,41 @@ class Card:
         self.abilities: List[Any] = (
             list(),
         )  # TODO: figure out the data structure for this
-        self.cardType: str = "DataCard",
+        self.cardType: str = ("DataCard",)
         self.composition: List[str] = (
             list(),
         )  # TODO: description of unit makeup; each index is a line
         self.factions: List[str] = (
             list(),
         )  # TODO: list of factions this belongs to; each index is a line
-        self.faction_id: str = "faction_id",  # TODO: hardcoded list of possible faction ids
+        self.faction_id: str = (
+            "faction_id",
+        )  # TODO: hardcoded list of possible faction ids
         self.fluff: str = "fluff"  # flavor text
         self.id: str = (uuid.uuid4(),)
         self.keywords: List[str] = (
             list(),
         )  # TODO: list of unit keywords; each index is a keyword
-        self.leader: str = "" # leader assigned? Not sure what this refers to
+        self.leader: str = ""  # leader assigned? Not sure what this refers to
         self.loadout: str = "loadout fluff"  # flavor text explaining default loadouts
         self.meleeWeapons: List[Any] = (list(),)  # TODO: figure out data structure
         self.name: str = name  # Actual name of unit
-        self.points: List[Points] = [], #TODO: this needs a CARD data type
-        self.rangedWeapons: List[Any] = list() # TODO: figure out this data structure
-        self.source = "40k-10e",
-        self.stats: List[UnitStats] = list() # TODO: this is essentially the data sheet stats
-        self.transport: str = "" # If this is a transport, there will be transport text here
-        self.wargear: List[str] = list() # Each index is a line of text about its wargear
-        self.variant: Optional[str] = None # no idea what this actually means, it's either "double" or empty
-        self.leadBy: List[str] = list() # List of unit names this can be led by
-
-
+        self.points: List[Points] = ([],)  # TODO: this needs a CARD data type
+        self.rangedWeapons: List[Any] = list()  # TODO: figure out this data structure
+        self.source = ("40k-10e",)
+        self.stats: List[UnitStats] = (
+            list()
+        )  # TODO: this is essentially the data sheet stats
+        self.transport: str = (
+            ""  # If this is a transport, there will be transport text here
+        )
+        self.wargear: List[str] = (
+            list()
+        )  # Each index is a line of text about its wargear
+        self.variant: Optional[str] = (
+            None  # no idea what this actually means, it's either "double" or empty
+        )
+        self.leadBy: List[str] = list()  # List of unit names this can be led by
 
     # @classmethod
     # def from_dict(cls, data: Dict[str, Any]) -> "DataCardShell":
@@ -256,14 +282,16 @@ def read_json_file(file_path: str) -> Dict[str, Any]:
         raise
 
 
-def find_gd_detachment_index(index_db: Dict[str, Any], detachment_name: str) -> Optional[int]:
+def find_gd_detachment_index(
+    index_db: Dict[str, Any], detachment_name: str
+) -> Optional[int]:
     """
     Perform a deep search through the index_db for a matching detachment, then return the index of it.
-    
+
     Args:
         index_db (Dict[str, Any]): The index_db from the GD export keyvaluepairs key
         detachment_name (str): The name of the detachment to search for
-        
+
     Returns:
         Optional[int]: The matching index of the indexdb data if found, None otherwise
     """
@@ -273,15 +301,15 @@ def find_gd_detachment_index(index_db: Dict[str, Any], detachment_name: str) -> 
     if "data" not in index_db:
         print("This is not a valid index_db keyvaluepair; it must contain a 'data' key")
         return None
-    
+
     # First check if this dict has a detachments key
     index = 0
     for army in index_db["data"]:
         # Search through the detachments list
-        for detachment in army['detachments']:
+        for detachment in army["detachments"]:
             if detachment.lower() == target:
                 print(f"Found detachment: {detachment} at index {index}")
-                return index    
+                return index
         index += 1
     return None
 
@@ -295,13 +323,6 @@ def read_index_json(file_path: str) -> Dict[str, Any]:
     # As of 5/24/25, this contains two keyvaluepairs - two separate versions.
     # The second index has the later version, so we'll just hardcode it for now.
     return gd_json_data["keyvaluepairs"][1]
-
-
-def read_newrecruit_json(file_path: str) -> Dict[str, Any]:
-    """
-    Read and parse the New Recruit JSON file.
-    """
-    return read_json_file(file_path)
 
 
 def main():
@@ -323,24 +344,21 @@ def main():
         print("Couldn't read the New Recruit file")
         sys.exit(1)
 
-    try:
-        # The best way to figure out which faction we have in
-        # common between NR and GD is the Detachment
-        if army_force.detachment:
-            detachment_index = find_gd_detachment_index(index_db, army_force.detachment)
-            if detachment_index:
-                print(f"Found matching detachment data: {detachment_index}")
-            else:
-                print(f"No matching detachment data found for {detachment_index}")
+    print("**********")
+    print("Now comparing Detachment to Game-Datacards Export Data")
+    # The best way to figure out which faction we have in
+    # common between NR and GD is the Detachment
+    if army_force.detachment:
+        detachment_index = find_gd_detachment_index(index_db, army_force.detachment)
+        if detachment_index:
+            print(f"Found matching detachment data: {detachment_index}")
         else:
-            print("No detachment name provided")
+            print(f"No matching detachment data found for {detachment_index}")
+    else:
+        print("No detachment name provided")
 
-        # print("Printing New Recruit army:")
-        # print_nr_army(nr_json_data)
-
-
-    except (FileNotFoundError, json.JSONDecodeError):
-        sys.exit(1)
+    # print("Printing New Recruit army:")
+    # print_nr_army(nr_json_data)
 
 
 if __name__ == "__main__":
